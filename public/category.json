@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "category_name": "ALL"
+  },
+  {
+    "id": 2,
+    "category_name": "Bangladesh"
+  },
+  {
+    "id": 3,
+    "category_name": "International"
+  },
+  {
+    "id": 4,
+    "category_name": "Sports"
+  },
+  {
+    "id": 5,
+    "category_name": "Entertainment"
+  }
+]
