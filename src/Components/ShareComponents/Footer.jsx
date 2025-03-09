@@ -22,13 +22,13 @@ const Footer = () => {
         <div className="mt-4">
           <p>Follow us on:</p>
           <div className="flex justify-center space-x-4 mt-2">
-            <a href="#" className="text-xl hover:text-blue-400">
+            <a href="#" className="text-2xl hover:text-blue-400">
               <FaFacebook />
             </a>
-            <a href="#" className="text-xl hover:text-blue-400">
+            <a href="#" className="text-2xl hover:text-blue-400">
               <FaTwitter />
             </a>
-            <a href="#" className="text-xl hover:text-pink-400">
+            <a href="#" className="text-2xl hover:text-pink-400">
               <FaInstagram />
             </a>
           </div>

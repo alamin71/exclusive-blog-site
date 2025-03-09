@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-import profileImg from "../assets/profileImg.png";
+import profileImg from "../../assets/profileImg.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-100 text-black px-4 py-1 mt-3">
+    <nav className="bg-blue-100 text-black px-4 py-1 mt-3">
       <div className="container mx-auto flex justify-between items-center">
         {/* Mobile Menu Button */}
         <button

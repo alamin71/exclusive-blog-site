@@ -20,7 +20,7 @@ const Categories = ({ setSelectedCategory, selectedCategory }) => {
             className={`w-full py-2 px-4 text-left  rounded-md  ${
               selectedCategory === cat.category_name
                 ? "bg-blue-600 text-white shadow-lg "
-                : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                : "bg-blue-100 text-gray-800 hover:bg-gray-200"
             }`}
           >
             {cat.category_name}
