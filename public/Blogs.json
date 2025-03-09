@@ -2,18 +2,6 @@
   {
     "id": 1,
     "category_name": "Bangladesh",
-    "blog_description": "Artificial Intelligence (AI) is rapidly evolving and has the potential to revolutionize multiple industries in Bangladesh. From healthcare and education to business and governance, AI-driven technologies are making an impact. However, with opportunities come challenges, such as ethical considerations, job displacement, and the need for proper regulations. This blog explores how Bangladesh can leverage AI for growth while addressing its associated challenges.",
-    "cover": "https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d",
-    "title": "The Future of AI: Opportunities and Challenges",
-    "author": "John Doe",
-    "author_img": "https://randomuser.me/api/portraits/men/1.jpg",
-    "reading_time": 5,
-    "posted_date": "2025-03-07",
-    "hastag": ["#AI", "#Technology", "#Future"]
-  },
-  {
-    "id": 2,
-    "category_name": "Bangladesh",
     "blog_description": "Dhaka, the capital of Bangladesh, faces severe traffic congestion, making urban transport a major challenge. With the introduction of Dhaka Metro, there is new hope for smoother and faster commuting. This blog discusses the advantages of the metro system, the economic impact, and the challenges related to implementation and public adaptation. Could this be the future of transportation in Bangladesh? Let's find out.",
     "cover": "https://www.railway-technology.com/wp-content/uploads/sites/13/2019/10/1l-Image-Dhaka-Metro-Mass-Rapid-Transit-System.jpg",
     "title": "Dhaka Metro: The Future of Urban Transport",
@@ -22,6 +10,18 @@
     "reading_time": 6,
     "posted_date": "2025-03-10",
     "hastag": ["#Dhaka", "#Metro", "#Transport"]
+  },
+  {
+    "id": 2,
+    "category_name": "Bangladesh",
+    "blog_description": "Artificial Intelligence (AI) is rapidly evolving and has the potential to revolutionize multiple industries in Bangladesh. From healthcare and education to business and governance, AI-driven technologies are making an impact. However, with opportunities come challenges, such as ethical considerations, job displacement, and the need for proper regulations. This blog explores how Bangladesh can leverage AI for growth while addressing its associated challenges.",
+    "cover": "https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d",
+    "title": "The Future of AI: Opportunities and Challenges",
+    "author": "John Doe",
+    "author_img": "https://randomuser.me/api/portraits/men/1.jpg",
+    "reading_time": 5,
+    "posted_date": "2025-03-07",
+    "hastag": ["#AI", "#Technology", "#Future"]
   },
   {
     "id": 3,

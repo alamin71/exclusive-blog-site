@@ -26,7 +26,7 @@ const BlogList = ({ selectedCategory, setSelectedBlog }) => {
 
   return (
     <div className="mt-4">
-      <span className="p-2 mb-5 mx-auto bg-slate-200 rounded-lg">
+      <span className="w-full p-2 mb-5 mx-auto bg-blue-600 text-white rounded hover:bg-blue-700">
         Blogs List by {selectedCategory}
       </span>
       {filteredBlogs.length > 0 ? (
