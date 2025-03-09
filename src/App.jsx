@@ -5,10 +5,10 @@ import "./App.css";
 import Blogs from "./Components/Blogs/Blogs";
 import Bookmarks from "./Components/Bookmarks/Bookmarks";
 import Categories from "./Components/Categories/Categories";
-import Header from "./Components/Header";
-import Navbar from "./Components/Navbar";
 import BlogList from "./Components/Categories/BlogList";
-import Footer from "./Footer";
+import Header from "./Components/ShareComponents/Header";
+import Navbar from "./Components/ShareComponents/Navbar";
+import Footer from "./Components/ShareComponents/Footer";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState("ALL");
