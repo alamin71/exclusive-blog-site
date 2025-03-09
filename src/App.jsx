@@ -59,13 +59,13 @@ function App() {
           <BlogList
             selectedCategory={selectedCategory}
             setSelectedBlog={setSelectedBlog}
-            setSelectedCategory={setSelectedCategory}
+            selectedBlog={selectedBlog}
           />
         </div>
         <Blogs
+          selectedBlog={selectedBlog}
           handleAddBookmark={handleAddBookmark}
           handleMarksAsRead={handleMarksAsRead}
-          selectedBlog={selectedBlog}
         />
         <Bookmarks
           bookmarks={bookmarks}

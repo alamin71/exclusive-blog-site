@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import Blog from "./Blog";
+import React, { useEffect, useState, useRef } from "react";
+import BlogDetails from "./BlogDetails";
 
 const Blogs = ({ selectedBlog, handleAddBookmark, handleMarksAsRead }) => {
   const [blogs, setBlogs] = useState([]);
-  console.log(blogs);
+  const blogDetailRef = useRef(null);
 
   useEffect(() => {
     fetch("Blogs.json")
@@ -11,20 +11,35 @@ const Blogs = ({ selectedBlog, handleAddBookmark, handleMarksAsRead }) => {
       .then((data) => setBlogs(data));
   }, []);
 
+  // show blog
+  useEffect(() => {
+    if (selectedBlog && blogDetailRef.current) {
+      setTimeout(() => {
+        // show blog before scroll and show blog then scroll
+        blogDetailRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 200);
+    }
+  }, [selectedBlog]);
+
   return (
     <div className="w-full md:w-6/12 p-4">
-      {/* যদি selectedBlog থাকে, তাহলে শুধুমাত্র সেই ব্লগটি দেখাবে */}
+      {/* selectedBlog show when select blog  */}
       {selectedBlog ? (
-        <Blog
-          key={selectedBlog.id}
-          blogImpot={selectedBlog}
-          handleAddBookmark={handleAddBookmark}
-          handleMarksAsRead={handleMarksAsRead}
-        />
+        <div ref={blogDetailRef}>
+          <BlogDetails
+            key={selectedBlog.id}
+            blogImpot={selectedBlog}
+            handleAddBookmark={handleAddBookmark}
+            handleMarksAsRead={handleMarksAsRead}
+          />
+        </div>
       ) : (
-        // selectedBlog না থাকলে সব ব্লগ দেখাবে
+        // selectedBlog  when not select bolg , show all blog
         blogs.map((blog) => (
-          <Blog
+          <BlogDetails
             key={blog.id}
             blogImpot={blog}
             handleAddBookmark={handleAddBookmark}
