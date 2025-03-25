@@ -45,13 +45,16 @@ const BlogList = ({ selectedCategory, setSelectedBlog, selectedBlog }) => {
 
   return (
     <div className="mt-4">
-      <div className="w-full p-2 mb-5 mx-auto bg-blue-600 text-white rounded hover:bg-blue-700 text-center">
-        Blogs List by {selectedCategory}
+      <div className="w-full p-2 mb-5 mx-auto bg-blue-600 dark:mx-2 text-white rounded hover:bg-blue-700 text-center">
+        <span className=""> Blogs List by {selectedCategory}</span>
       </div>
 
       {filteredBlogs.length > 0 ? (
         filteredBlogs.map((blog) => (
-          <div key={blog.id} className="mb-4 p-4 border rounded-lg shadow">
+          <div
+            key={blog.id}
+            className="mb-4 p-4 border dark:rounded-md dark:ml-2 rounded-lg shadow"
+          >
             <img
               className="w-full h-32 object-cover rounded"
               src={blog.cover}

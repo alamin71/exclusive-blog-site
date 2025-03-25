@@ -6,9 +6,9 @@ import Blogs from "./Components/Blogs/Blogs";
 import Bookmarks from "./Components/Bookmarks/Bookmarks";
 import Categories from "./Components/Categories/Categories";
 import BlogList from "./Components/Categories/BlogList";
-import Header from "./Components/ShareComponents/Header";
 import Navbar from "./Components/ShareComponents/Navbar";
 import Footer from "./Components/ShareComponents/Footer";
+import ThemeProvider from "./context/ThemeContext";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState("ALL");
@@ -47,33 +47,36 @@ function App() {
   };
   return (
     <>
-      <Header />
-      <Navbar />
-      <ToastContainer />
-      <div className="flex flex-col md:flex-row mt-10 gap-2">
-        <div className="w-ful md:w-3/12">
-          <Categories
-            selectedCategory={selectedCategory}
-            setSelectedCategory={setSelectedCategory}
-          />
-          <BlogList
-            selectedCategory={selectedCategory}
-            setSelectedBlog={setSelectedBlog}
-            selectedBlog={selectedBlog}
-          />
+      <ThemeProvider>
+        <div className="bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen">
+          <Navbar />
+          <ToastContainer />
+          <div className="flex flex-col md:flex-row mt-10 gap-2">
+            <div className="w-ful md:w-3/12">
+              <Categories
+                selectedCategory={selectedCategory}
+                setSelectedCategory={setSelectedCategory}
+              />
+              <BlogList
+                selectedCategory={selectedCategory}
+                setSelectedBlog={setSelectedBlog}
+                selectedBlog={selectedBlog}
+              />
+            </div>
+            <Blogs
+              selectedBlog={selectedBlog}
+              handleAddBookmark={handleAddBookmark}
+              handleMarksAsRead={handleMarksAsRead}
+            />
+            <Bookmarks
+              bookmarks={bookmarks}
+              readingTime={readingTime}
+              setSelectedBlog={setSelectedBlog}
+            />
+          </div>
+          <Footer />
         </div>
-        <Blogs
-          selectedBlog={selectedBlog}
-          handleAddBookmark={handleAddBookmark}
-          handleMarksAsRead={handleMarksAsRead}
-        />
-        <Bookmarks
-          bookmarks={bookmarks}
-          readingTime={readingTime}
-          setSelectedBlog={setSelectedBlog}
-        />
-      </div>
-      <Footer />
+      </ThemeProvider>
     </>
   );
 }

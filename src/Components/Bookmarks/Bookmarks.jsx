@@ -7,7 +7,7 @@ const Bookmarks = ({ bookmarks, readingTime, setSelectedBlog }) => {
   return (
     <div className="w-full md:w-3/12">
       {/* Reading Time Section */}
-      <div className="bg-blue-100 text-blue-700 font-semibold p-2 rounded shadow-md mb-2 flex items-center justify-center gap-2">
+      <div className="bg-blue-100 dark:bg-gray-800  text-blue-700 font-semibold p-2 rounded shadow-md mb-2 flex items-center justify-center gap-2">
         <AiOutlineClockCircle className="text-xl" />
         <span>
           Time Spent Reading: <span className="font-bold">{readingTime}</span>{" "}
@@ -16,10 +16,12 @@ const Bookmarks = ({ bookmarks, readingTime, setSelectedBlog }) => {
       </div>
 
       {/* Bookmarks Section */}
-      <div className="bg-white p-4 rounded-lg shadow-md">
+      <div className="bg-white dark:bg-gray-800  p-4 rounded-lg shadow-md">
         <h2 className="text-lg font-semibold text-gray-800 mb-2 flex items-center gap-2">
-          <BsBookmarkFill className="text-blue-500" />
-          Bookmarked Blogs: {bookmarks.length}
+          <BsBookmarkFill className="text-blue-500 " />
+          <span className="dark:text-white">
+            Bookmarked Blogs: {bookmarks.length}
+          </span>
         </h2>
         <div className="space-y-2">
           {bookmarks.map((bookmark, idx) => (
